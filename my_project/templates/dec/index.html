@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Arbre de décision</title>
+
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+</head>
+
+
+<body>
+
+<div id="header_sticky" class="header">
+  <div class="container px-xl-5">
+    <div class="px-4 px-xxl-5">
+      <nav class="navbar navbar-expand-xl navbar-light">
+        <div class="container-fluid px-0 justify-content-center">
+          <a class="navbar-brand" href="/">
+            <img class="d-inline-block logo" src="https://survey.application-proxi.com/uploads/menu/65a5e77657104583144552.png" alt="Logo">
+          </a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<main>
+
+  <div class="container px-xl-5 position-relative">
+    <div class="builder_hr px-4 px-xxl-5 py-5">
+      <div class="mx-0 mx-lg-5 "></div>
+    </div>
+  </div>
+
+  <div class="container px-xl-5 position-relative">
+    <div class="builder_title px-4 px-xxl-5">
+      <h1 class="letter-spacing1  fw-semibold text-body builder_font_weight2 builder_title_font2 text-center">
+        Enquête de satisfaction
+      </h1>
+    </div>
+  </div>
+
+  <div class="container px-xl-5 position-relative">
+    <div class="builder_title px-4 px-xxl-5">
+      <h3 class="letter-spacing1  fw-semibold text-body builder_font_weight2 builder_title_font2 text-center">
+        Centre de téléassistance de la DSI
+      </h3>
+    </div>
+  </div>
+
+
+  <div class="container pt-5">
+
+    <div class="row justify-content-center">
+      <div class="container-arbre shadow col-sm-8">
+
+        <div class="top-container">
+
+          <h2 class="text-lg">Arbre de décision</h2>
+
+          <!-- Champ de recherche -->
+          <div class="search-container">
+            <div class="search-inons">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+              </svg>
+            </div>
+            <input type="text" id="champRecherche" class="champRecherche" placeholder="Rechercher dans la racine..." oninput="rechercherDansRacine()">
+          </div>
+
+        </div>
+
+        <div class="button-bar justify-content-start">
+          <button id="returnButtonRacine" class="btn btn-primary rounded-pill" style="display: none;">Retour Racine</button>
+          <button id="returnButton" class="btn btn-primary rounded-pill" style="display: none;">Retour</button>
+        </div>
+
+        <div id="tree" class="shadow tree"></div>
+
+      </div>
+
+
+      <div class="container-historique shadow col-sm-4">
+        <h2>Historique</h2>
+        <div id="historique" class="shadow historique"></div>
+      </div>
+
+    </div>
+
+  </div>
+</main>
+
+
+<footer class="bg_footer mt-5 py-5 position-relative">
+  <div class="py-xl-5">
+    <div class="container pt-5 px-xl-5">
+      <div class="px-4 px-xxl-5">
+        <div class="row">
+          <div class="col">
+            <img class="logo" src="#" alt="Logo">
+          </div>
+          <div class="col">
+            <div class="builder_small_text_size">
+              Numéro de téléphone : 40 52 34 66
+              <br>Adresse :
+              BP 2866 - 98713 Fare Tony
+              <br>Centre Vaima 3ème étage - Bureau 85
+              <br>
+
+            </div>
+            <div class="pt-2">
+              <ul class="p-0 m-0 list-unstyled social_links">
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <ul class="p-0 m-0 footer_link_grid list-unstyled">
+              <li>
+                <a class="text-decoration-none builder_small_text_size" href="/fr/p/mentions-legales">Mentions légales</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="{{ asset('js/Donnee.js') }}"></script>
+<script src="{{ asset('js/script.js') }}"></script>
+
+</body>
+
+</html>

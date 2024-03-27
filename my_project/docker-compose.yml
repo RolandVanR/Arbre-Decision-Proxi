@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+
+  dec:
+    image: mon_apache
+    ports:
+      - "8080:8080"
+    volumes:
+#      - C:\Users\r.grillot\GRILLOT_Maihea_Richard\laragon\www\arbre
+      - .:/app
+#      - - C:\Users\richard\Doc:/app
